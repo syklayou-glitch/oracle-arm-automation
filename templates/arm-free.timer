@@ -1,0 +1,14 @@
+[Unit]
+Description=Retry an approved Oracle ARM instance launch
+
+[Timer]
+OnActiveSec=30s
+OnUnitInactiveSec=5min
+RandomizedDelaySec=5min
+AccuracySec=1s
+Persistent=true
+Unit=arm-free.service
+
+[Install]
+WantedBy=timers.target
+
